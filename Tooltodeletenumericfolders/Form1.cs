@@ -19,7 +19,11 @@ namespace Tooltodeletenumericfolders
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
+
+            DateTime benchmark = DateTimePicker.Value.Date;
+            String path = FilePathTextBox.Text.ToString();
             
+
         }
     }
 }

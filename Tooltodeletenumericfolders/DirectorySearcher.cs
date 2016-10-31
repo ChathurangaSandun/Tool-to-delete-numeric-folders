@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Tooltodeletenumericfolders
 {
-    class DirectorySearcher : GetD
+    public static class DirectorySearcher
     {
+
+
+
+
     }
 }
