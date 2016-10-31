@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Tooltodeletenumericfolders
 {
-    public class Directory
+    public class Directory 
     {
         private String _directoryName;
         private DateTime _createDateTime;

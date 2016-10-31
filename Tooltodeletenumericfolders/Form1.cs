@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,17 @@ namespace Tooltodeletenumericfolders
         private void DeleteButton_Click(object sender, EventArgs e)
         {
 
-            DateTime benchmark = DateTimePicker.Value.Date;
+            DateTime benchmarkDate = DateTimePicker.Value.Date;
+            //TimeSpan benchmarkTime = TimePicker.Value.TimeOfDay;
             String path = FilePathTextBox.Text.ToString();
-            
+
+            DirectoryInfo[] directoryInfos = DirectorySearcher.GetDirectories(path,benchmarkDate);
+            foreach (var file in directoryInfos)
+            {
+                Console.WriteLine(file.Name+" "+file.LastAccessTime);
+                
+            }
+
 
         }
     }
